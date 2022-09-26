@@ -1,22 +1,20 @@
 # Method to host laravel project in Cpanel
-```
 
-![image](https://user-images.githubusercontent.com/29918977/192231894-88cc3247-53e2-441a-8c0d-02c802ac26a1.png)
+![image](https://user-images.githubusercontent.com/29918977/192233624-f3d7c928-4fe2-45fb-b0fe-67af648b88a6.png)
 
-```
-Make one folder that contain laravel files.
+Make one folder that contain laravel files. Here abcd is folder name
 Make another file called .htaccess
 ```
-
-RewriteCond %{HTTP_HOST} ^ocr.gov.np$ [NC,OR]   //replace host name
-RewriteCond %{HTTP_HOST} ^www.ocr.gov.np$       //replace host name
-RewriteCond %{REQUEST_URI} !ocr/public/        //replace folder name
-RewriteRule (.*) /ocr/public/$1 [L]            //replace folder name
+```
+RewriteCond %{HTTP_HOST} ^abc.np$ [NC,OR]   //replace host name
+RewriteCond %{HTTP_HOST} ^www.abc.np$       //replace host name
+RewriteCond %{REQUEST_URI} !abcd/public/        //replace folder name
+RewriteRule (.*) /abcd/public/$1 [L]            //replace folder name
 
 ```
+```
 
-![image](https://user-images.githubusercontent.com/29918977/192232148-931056d3-211f-4a28-ad89-bd00cf3f9e61.png)
-
+![image](https://user-images.githubusercontent.com/29918977/192234216-c434380a-0d62-41a9-811c-a19c061f966c.png)
 
 
 ## This is the code of .htaccess
@@ -25,10 +23,10 @@ RewriteRule (.*) /ocr/public/$1 [L]            //replace folder name
 
 
 RewriteEngine on
-RewriteCond %{HTTP_HOST} ^ocr.gov.np$ [NC,OR]
-RewriteCond %{HTTP_HOST} ^www.ocr.gov.np$
-RewriteCond %{REQUEST_URI} !ocr/public/
-RewriteRule (.*) /ocr/public/$1 [L]
+RewriteCond %{HTTP_HOST} ^abc.np$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.abc.np$
+RewriteCond %{REQUEST_URI} !abcd/public/
+RewriteRule (.*) /abcd/public/$1 [L]
 
 RewriteEngine On
 RewriteCond %{HTTPS} off

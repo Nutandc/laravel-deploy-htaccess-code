@@ -4,15 +4,14 @@
 
 Make one folder that contain laravel files. Here abcd is folder name
 Make another file called .htaccess
-```
+
 ```
 RewriteCond %{HTTP_HOST} ^abc.np$ [NC,OR]   //replace host name
 RewriteCond %{HTTP_HOST} ^www.abc.np$       //replace host name
 RewriteCond %{REQUEST_URI} !abcd/public/        //replace folder name
 RewriteRule (.*) /abcd/public/$1 [L]            //replace folder name
 
-```
-```
+````
 
 ![image](https://user-images.githubusercontent.com/29918977/192234216-c434380a-0d62-41a9-811c-a19c061f966c.png)
 
